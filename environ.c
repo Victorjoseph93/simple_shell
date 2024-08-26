@@ -13,7 +13,7 @@ int _myenviron(info_t *info)
 }
 
 /**
- * _getenviron - function gets the value of an environ variable
+ * _getenviron - function gets the value of an environ variable.
  * @info: Structure containing potential arguments. Used to maintain
  * @name: env var name
  *
