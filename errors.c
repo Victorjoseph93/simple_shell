@@ -1,8 +1,8 @@
 #include "shell.h"
 
 /**
- *_eputs - function prints an input string
- * @str: the string to be printed
+ *_eputs - function prints an input string.
+ * @str: the string to be printed.
  *
  * Return: Nothing
  */
@@ -19,8 +19,8 @@ void _eputs(char *str)
 }
 
 /**
- * _eputchar - function writes the character c to stderr
- * @c: The character to print
+ * _eputchar - function writes the character c to stderr.
+ * @c: The character to print.
  *
  * Return: On successreturns  1.
  * On error, -1 is returned, and errno is set appropriately.
@@ -41,8 +41,8 @@ int _eputchar(char c)
 }
 
 /**
- * _putfd - function writes the character c to given fd
- * @c: The character to print
+ * _putfd - function writes the character c to given fd.
+ * @c: The character to print.
  * @fd: The filedescriptor to write to
  *
  * Return: On success returns 1.
