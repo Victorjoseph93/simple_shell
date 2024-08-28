@@ -12,18 +12,18 @@
 #include <fcntl.h>
 #include <errno.h>
 
-/* this would be used for read/write buffers */
+/* for read/write buffers */
 #define READ_BUF_SIZE 1024
 #define WRITE_BUF_SIZE 1024
 #define BUF_FLUSH -1
 
-/* used for command chaining */
+/* for command chaining */
 #define CMD_NORM	0
 #define CMD_OR		1
 #define CMD_AND		2
 #define CMD_CHAIN	3
 
-/* used for convert_number() */
+/* for convert_number() */
 #define CONVERT_LOWERCASE	1
 #define CONVERT_UNSIGNED	2
 
@@ -38,10 +38,10 @@ extern char **environ;
 
 
 /**
- * struct liststr - function for singly linked list
+ * struct liststr - singly linked list
  * @num: the number field
- * @str: a string of characters
- * @next: pointer to the next node
+ * @str: a string
+ * @next: points to the next node
  */
 typedef struct liststr
 {
@@ -54,7 +54,7 @@ typedef struct liststr
  *struct passinfo - contains pseudo-arguements to pass into a function,
  *		allowing uniform prototype for function pointer struct
  *@arg: a string generated from getline containing arguements
- *@argv: an array of strings generated from user arg
+ *@argv: an array of strings generated from arg
  *@path: a string path for the current command
  *@argc: the argument count
  *@line_count: the error count
@@ -193,16 +193,16 @@ void set_info(info_t *, char **);
 void free_info(info_t *, int);
 
 /* toem_environ.c */
-char *_getenviron(info_t *, const char *);
-int _myenviron(info_t *);
-int _mysetenviron(info_t *);
-int _myunsetenviron(info_t *);
+char *_getenv(info_t *, const char *);
+int _myenv(info_t *);
+int _mysetenv(info_t *);
+int _myunsetenv(info_t *);
 int populate_env_list(info_t *);
 
 /* toem_getenv.c */
 char **get_environ(info_t *);
-int _unsetenviron(info_t *, char *);
-int _setenviron(info_t *, char *, char *);
+int _unsetenv(info_t *, char *);
+int _setenv(info_t *, char *, char *);
 
 /* toem_history.c */
 char *get_history_file(info_t *info);

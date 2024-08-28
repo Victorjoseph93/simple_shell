@@ -50,16 +50,13 @@ int _atoi(char *s)
 	int k, sign = 1, flag = 0, output;
 	unsigned int result = 0;
 
-	k = 0;
-	while (s[k] != '\0' && flag != 2;)
-		k++;
 
-	/*for (k = 0;  s[k] != '\0' && flag != 2; k++)*/
+	for (k = 0;  s[k] != '\0' && flag != 2; k++)
 	{
 		if (s[k] == '-')
 			sign *= -1;
 
-		if (s[k] >= '0' && s[i] <= '9')
+		if (s[k] >= '0' && s[k] <= '9')
 		{
 			flag = 1;
 			result *= 10;
