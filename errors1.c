@@ -1,8 +1,8 @@
 #include "shell.h"
 
 /**
- * _erratoi - function converts a string to an integer
- * @s: the string to be converted
+ * _erratoi - function converts a string to an integer.
+ * @s: the string to be converted.
  * Return: returns 0 if no numbers in string, converted number otherwise
  *       -1 on error
  */
