@@ -13,11 +13,7 @@ int _myenv(info_t *info)
 }
 
 /**
-<<<<<<< HEAD
  * _getenv - gets the value of an environ variable
-=======
- * _getenviron - function gets the value of an environ variable.
->>>>>>> 661276cc17330209f97d7f7c64f268dc0fa5ba76
  * @info: Structure containing potential arguments. Used to maintain
  * @name: env var name
  *
